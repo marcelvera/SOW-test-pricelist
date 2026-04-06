@@ -45,7 +45,6 @@ class TextUiSerializers(serializers.ModelSerializer):
     class Meta:
         model = TextUi
         fields = '__all__'
-        read_only_fields = '__all__'
         
 class UserTextUiSerializers(serializers.ModelSerializer):
     class Meta:

@@ -2,10 +2,23 @@ from django.contrib.auth import authenticate
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .serializers import UserSerializers, ProductSerializers
+from rest_framework.permissions import AllowAny
+from .serializers import UserSerializers, ProductSerializers, TextUiSerializers
 from django.contrib.auth.models import User
-from .models import Product
+from .models import Product, TextUi
 from django.shortcuts import get_object_or_404
+
+class TextUiViewSet(viewsets.ViewSet):
+    
+    permission_classes = [AllowAny]
+    
+    @action(detail=False, methods=['get'], url_path='lang')
+    def get_text(self, request):
+        
+        queryset = TextUi.objects.all()
+        serializer = TextUiSerializers(queryset, many=True)
+        return Response(serializer.data)
+        
         
 class ProductViewSet(viewsets.ViewSet):
     

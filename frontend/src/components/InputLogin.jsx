@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import "../styles/Login.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+
 
 const InputLogin = ({label, type, name, placeholder, isPassword = false}) => {
 
@@ -10,13 +13,13 @@ const InputLogin = ({label, type, name, placeholder, isPassword = false}) => {
   return (
     <div className='login-card__input'>
       <label className='login-page__label' htmlFor={name}>{label}</label>
-      <div>
+      <div className='login-input__box'>
         <input className='login-page__input' type={inputType} placeholder={placeholder}
                name={name} required/>
-
+        
         {isPassword && (
-          <button type='button' onClick={() => setShowPassword(!showPassword)} >
-            {showPassword ? "ver" : "no"}
+          <button className='login-page__icon' type='button' onClick={() => setShowPassword(!showPassword)} >
+            {showPassword ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEye} />}
           </button>
         )}
       </div>
