@@ -299,7 +299,7 @@
     .dashboard-price__name,
     .dashboard-price__price {
         display: flex;
-        grid-column: span 2; /* Cada una ocupa una de las 2 columnas */
+        grid-column: span 2;
     }
 
     .dashboard-input__group{
