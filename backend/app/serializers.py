@@ -39,7 +39,7 @@ class ProductSerializers(serializers.ModelSerializer):
     
     class Meta:
         model = Product
-        exclude = ['id']
+        fields = '__all__'
         
 class TextUiSerializers(serializers.ModelSerializer):
     class Meta:

@@ -35,7 +35,6 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 20px;
 }
 
 .nav-page__li{
@@ -49,10 +48,10 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-left: 5px;
     cursor: pointer;
     align-items: center;
     width: 50px;
+    margin-left: 10px;
 }
 
 .nav-flag__card{
@@ -90,8 +89,10 @@
     background-color: white;
     border-style: none;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 12px;
     box-shadow:  1px 12px 10px 1px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    margin-top: 30px;
 
 }
 
@@ -105,17 +106,18 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login-page{
     background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-position-y: top;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.login-page{
     display: grid;
     grid-template-columns: 1fr;
+
 }
 
 .login-page__card{
@@ -159,7 +161,10 @@ body{
 /* Footer */
 
 .login-footer{
+    display: flex;
+    flex-direction: column;
     margin-top: 8rem;
+    gap: 5px;
 }
 
 .login-footer__card{
@@ -192,6 +197,7 @@ body{
 
 .login-footer__reserved{
     justify-content: center;
+    padding: 15px;
 }
 
 .login-footer__p{

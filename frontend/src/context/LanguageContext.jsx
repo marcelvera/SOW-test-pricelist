@@ -1,5 +1,5 @@
 import React, {useState, useEffect, createContext} from "react";
-import publicInstance from "../services/Api";
+import { publicInstance } from "../services/Api";
 
 export const LenguageContext = createContext()
 

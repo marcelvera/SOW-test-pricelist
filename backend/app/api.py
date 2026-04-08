@@ -25,7 +25,7 @@ class ProductViewSet(viewsets.ViewSet):
     @action(detail=False, methods=['get'], url_path='all')
     def get_all(self, request):
         
-        queryset = Product.objects.all()
+        queryset = Product.objects.all().order_by('id')
         serializer = ProductSerializers(queryset, many=True, context={'request': request})
         return Response(serializer.data)
     
