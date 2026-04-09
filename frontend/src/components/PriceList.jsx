@@ -5,7 +5,7 @@ import { instance } from '../services/Api'
  const data = [
     {id:"1", name:'Article No', class:'dashboard-input__price'},
     {id:"2", name:'Product/Service'},
-    {id:"3", name:'In Price' , class:'dashboard-input__price'},
+    {id:"3", name:'In Price'},
     {id:"4", name:'Price'},
     {id:"5", name:'unit', class:'dashboard-input__price'},
     {id:"6", name:'In Stock', class:'dashboard-input__price'},
@@ -57,6 +57,7 @@ import { instance } from '../services/Api'
                         dashboard-price__item 
                         ${arg.name === 'Product/Service' ? 'dashboard-price__name' : ''} 
                         ${arg.name === 'Price' ? 'dashboard-price__price' : ''}
+                        ${arg.name === 'In Price' ? 'dashboard-price__inprice' : ''}
                     `}>
                         <label className='dashboard-price__label'>{arg.name}</label>
                     </div>

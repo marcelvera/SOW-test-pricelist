@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=sowdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Marcelvera08034885
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - PGSQL_NAME=sowdb
+      - PGSQL_USER=postgres
+      - PGSQL_PASSWORD=Marcelvera08034885
+      - PGSQL_HOST=db
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - db
+
+volumes:
+  postgres_data:

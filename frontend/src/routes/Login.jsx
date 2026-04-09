@@ -48,10 +48,10 @@ function Login() {
 
                 <div className='login-page__form'>
                     <InputLogin label={valueText('label-email')} type="email" 
-                            name="email" placeholder="email address" value={cred.email} onChange={handleChange}/>
+                            name="email" placeholder={valueText('input-placeholder-email')} value={cred.email} onChange={handleChange}/>
 
                     <InputLogin label={valueText('label-password')} isPassword={true} type="password" 
-                        name="password" placeholder="Password" value={cred.password} onChange={handleChange}/>
+                        name="password" placeholder={valueText('input-placeholder-pass')} value={cred.password} onChange={handleChange}/>
                 </div>
 
                 <BtnLogin />

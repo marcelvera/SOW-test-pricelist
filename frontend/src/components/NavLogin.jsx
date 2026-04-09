@@ -35,6 +35,7 @@ const NavLogin = () => {
                   <li className="nav-burger__li" key={arg.id}>{valueText(arg.key)}</li>
               )))}
           </ul>
+          
         </div>
 
         {/* Navbar Desktop */}
@@ -43,9 +44,7 @@ const NavLogin = () => {
             {btn.map((arg) => (
                 <li className="nav-page__li" key={arg.id}>{valueText(arg.key)}</li>
             ))}
-            
-            <SetLang />
-
+          <SetLang />
         </ul>
 
       </div>

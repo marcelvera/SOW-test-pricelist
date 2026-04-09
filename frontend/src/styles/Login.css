@@ -6,7 +6,10 @@
 
 /* Header */
 .nav-page{
-    margin: 3.5rem;
+    margin-top: 2.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
     height: 40px;
 }
 
@@ -34,13 +37,14 @@
     display: flex;
     flex-direction: row;
     list-style: none;
+   gap: 50px;
 }
 
 .nav-page__li{
     background-color: transparent;
     color: white;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .nav-flag{
@@ -132,7 +136,10 @@ body{
     flex-direction: column;
     gap: 10px;
     background-color: white;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
     border-radius: 2rem;
     align-items: center;
 }
@@ -183,6 +190,7 @@ body{
     display: flex;
     flex-direction: row;
     list-style: none;
+    gap: 3rem;
 }
 
 .login-footer__li{
@@ -204,35 +212,22 @@ body{
     text-align: center;
 }
 
-/* Desktop */
-
-@media (min-width: 1024px) {
-    .nav-page{
-        margin-top: 2.5rem;
-        margin-left: 10rem;
-        margin-right: 10rem;
-        margin-bottom: 4rem;
-    }
-    
-    .nav-page__li{
-        font-size: 18px;
-    }
-
-    .nav-page__ul{
-        gap: 50px;
-    }
-}
-
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* nav */
 
     .nav-burger{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         z-index: 2;
+        gap: 0px;
+    }
+
+    .login-page__input{
+        width: 22rem;
+       
     }
 
     .nav-burger__ul{
@@ -255,9 +250,15 @@ body{
         margin-right: 25px;
     }
 
+    .nav-page{
+       margin: 3rem;
+       height: 40px;
+    }
+
     .nav-page__li{
         display: none;
     }
+
 
     .nav-page__img{
         display: none;
@@ -272,10 +273,15 @@ body{
         align-items: center;
         justify-content: center;
         height: 450px;
-        padding: 5px;
-        margin-right: 0.3rem;
-        margin-left: 0.3rem;
+        padding: 0px;
         border-radius: 3rem;
+    }
+
+    .login-footer__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -296,7 +302,7 @@ body{
 .login-page__input{
     padding: 12px;
     border-radius: 2rem;
-    width: 22rem;
+    width: 24rem;
     border: 1.5px solid rgb(165, 165, 165);
 }
 

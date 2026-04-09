@@ -73,6 +73,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+ALLOWED_HOSTS = ['*']
 
 ROOT_URLCONF = 'sow.urls'
 
@@ -103,8 +106,8 @@ DATABASES = {
         "NAME": config("PGSQL_NAME"),
         "USER": config("PGSQL_USER"),
         "PASSWORD": config("PGSQL_PASSWORD"), 
-        "HOST": config("PGSQL_HOST"),
-        "PORT": config("PGSQL_PORT"),
+        "HOST": config("PGSQL_HOST", 'db'),
+        "PORT": config("PGSQL_PORT", "5432"),
     }
 }
 

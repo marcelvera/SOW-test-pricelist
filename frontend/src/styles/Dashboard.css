@@ -267,6 +267,27 @@
     
 }
 
+@media (max-width:1024px) {
+    .sidebar-dashboard{
+        display: none;
+    }
+
+    .dashboard-page__main {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .dashboard-option__card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dashboard-price__inprice{
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-dashboard {
         padding: 10px 2rem;
@@ -314,6 +335,6 @@
     .dashboard-input__icon{
         transform: translate(875%, -150%);
         color: aqua;
-    }   
+    } 
 
 }
