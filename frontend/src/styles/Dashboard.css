@@ -9,6 +9,9 @@
     padding-right: 6rem;
     padding-left: 6rem;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 
 }
 
@@ -60,7 +63,7 @@
     gap: 20px;
     height: 100dvh;
     position: fixed;
-
+    top: 70px;
 }
 
 
@@ -130,8 +133,8 @@
 }
 
 .dashboard-page{
-    height: 80vh;
-    overflow-y: hidden;
+    height: 100vh;
+    overflow-y: visible;
 }
 
 .dashboard-page__card{
@@ -211,10 +214,7 @@
 .dashboard-scroll{
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    flex-grow: 1; 
-    overflow-y: auto; 
-    overflow-x: hidden; 
+    height: 100vh;
     padding-right: 5px;
 }
 
